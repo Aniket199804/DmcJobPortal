@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "98ef54c9-776c-42f9-a026-51a7f00acd7f",
+		"name": "JobPortal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27551299"
+	},
+	"item": [
+		{
+			"name": "RecruiterApi's",
+			"item": [
+				{
+					"name": "updateJobStatus(Active/Inactive)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/recruiter/1"
+					},
+					"response": []
+				},
+				{
+					"name": "searchApplicantBySkills",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"skill\":\"java\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/recruiter/getcandidates"
+					},
+					"response": []
+				},
+				{
+					"name": "registerRecruiter",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\":\"recruit\",\n    \"last_name\":\"recruitpass\",\n    \"email\":\"recruit@gmail\",\n    \"password\":\"abc\",\n    \"contact_number\":\"895232\",\n    \"company_name\":\"abc\",\n    \"registration_date\":\"2023-10-10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "shortlistApplicant",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"applicantid\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/recruiter/shortlist"
+					},
+					"response": []
+				},
+				{
+					"name": "loginRecruiter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"email\",\n    \"password\":\"pass\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/recruiter/login"
+					},
+					"response": []
+				},
+				{
+					"name": "updateRecruiter",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\" : \"rect1\", \"last_name\":\"rect1\", \"email\": \"email1\", \"password\": \"pass\", \"contact_number\" : \"12345654\"\n\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/recruiter/edit/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ApplicantApi's",
+			"item": [
+				{
+					"name": "RegisterApplicant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\":\"user\",\n    \"last_name\":\"user\",\n    \"email\":\"user email\",\n    \"password\":\"pass\",\n    \"gender\":\"m\",\n    \"Contact_number\":\"23324\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/applicant/register"
+					},
+					"response": []
+				},
+				{
+					"name": "updateApplicant",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\":\"user2\",\n    \"last_name\":\"user\",\n    \"email\":\"user email\",\n    \"password\":\"pass\",\n    \"gender\":\"m\",\n    \"Contact_number\":\"23324\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/applicant/updateapplicant/1"
+					},
+					"response": []
+				},
+				{
+					"name": "addEducationalDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"applicant_id\":1,\n    \"degree_name\":\"BCA\",\n     \"university_name\":\"Uni pune\",\n     \" start_date\":\"1960-12-10\",\n      \"completion_date\":\"1962-12-10\",\n       \"percentage\":89.5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/applicant/addeducationdetails"
+					},
+					"response": []
+				},
+				{
+					"name": "loginApplicant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"user\",\n    \"password\":\"pass\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/applicant/login"
+					},
+					"response": []
+				},
+				{
+					"name": "searchJob",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"job_type\":\"job_type\",\n    \"company_name\":\"company\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/applicant/searchjob"
+					},
+					"response": []
+				},
+				{
+					"name": "filterJob",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"job_location\":\"pune\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/applicant/filterjob"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JobAppliedApi's",
+			"item": [
+				{
+					"name": "jobAppliedApi",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"applicant_id\" : \"1\",\n    \"posted_by_id\" : \"1\",\n    \"job_id\" : \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:4000/jobapplied/apply"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

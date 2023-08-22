@@ -1,0 +1,8 @@
+.banner_section {
+    width: 100%;
+    float: left;
+    background-image: url(./images/banner-bg.png);
+    height: auto;
+    padding-bottom: 90px;
+    background-size: cover;
+}
